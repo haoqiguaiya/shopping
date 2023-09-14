@@ -1,12 +1,11 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-
 import home from '@/views/layout/home'
 import category from '@/views/layout/category'
 import cart from '@/views/layout/cart'
 import user from '@/views/layout/user'
 import store from '@/store'
 
+import Vue from 'vue'
+import VueRouter from 'vue-router'
 const login = () => import('@/views/login')
 const layout = () => import('@/views/layout')
 const myOrder = () => import('@/views/myOrder')

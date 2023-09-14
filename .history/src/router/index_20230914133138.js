@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-
 import home from '@/views/layout/home'
 import category from '@/views/layout/category'
 import cart from '@/views/layout/cart'
