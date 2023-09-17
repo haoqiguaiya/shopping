@@ -9,7 +9,7 @@
 
         <div class="form">
         <div class="form-item">
-          <input class="inp" maxlength="11" placeholder="请输入手机号码" type="text" v-model="mobile">
+          <input class="inp" maxlength="11" placeholder="请输入手机号码:15751776629" type="text" v-model="mobile">
           </div>
           <div class="form-item">
           <input class="inp" maxlength="5" placeholder="图形验证码" type="text" v-model="picCode">

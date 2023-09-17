@@ -1,6 +1,6 @@
 import request from '@/utils/requests'
 export const getAddressList = () => { // 获取订单页数据
-  return request.post('/address/list')
+  return request.get('/address/list')
 }
 // export const addressList = () => { // 添加地址
 //   return request.post('/address/add', {
@@ -19,11 +19,33 @@ export const getAddressList = () => { // 获取订单页数据
 //
 export const checkOrder = (mode, obj) => {
   return request.get('/checkout/order', {
+    params: {
+      mode,
+      delivery: 10,
+      couponId: 0,
+      isUsePoints: 0,
+      ...obj
+    }
+
+  })
+}
+//
+export const submitOrder = (mode, obj) => {
+  return request.post('/checkout/submit', {
     mode,
     delivery: 10,
     couponId: 0,
     isUsePoints: 0,
-    remark: '',
+    payType: 10,
     ...obj
+  })
+}
+
+export const getMyOrderList = (dataType, page) => {
+  return request.get('/order/list', {
+    params: {
+      dataType,
+      page
+    }
   })
 }

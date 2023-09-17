@@ -15,6 +15,9 @@ export default {
     }
   },
   actions: {
-
+    logout (context) {
+      context.commit('setUserInfo', {})
+      context.commit('cart/setCartList', [], { root: true })
+    }
   }
 }
